@@ -49,7 +49,7 @@ What went really well and what could have gone better?
 
 A basic blog, the home screen will hold a blog description and list of existing blogs, user will be able to sort them in ascending or descending order using a discrete button.
 
-Clicking on an individual blog title in the list will open the blog page, Here the blog will be displayed, consisting of an image component at the top, this may later have a seriese of images that will be displayed in sequence, for now a singular image with no frills, bellow this will be a text content of the blog, below this will be a commment form, this being a component with fields for username email and comment along with a save button, below this is a component that will display any posted comments, giving the username and comment but not the email, if a comment is selected this will open a comment edit page where the user will be able to edit or delete the comment, they will need to enter the same email as used to make the comment, this gives a simple authentication simulation.
+Clicking on an individual blog title in the list will open the blog page, Here the blog will be displayed, consisting of an image component at the top, this may later have a series of images that will be displayed in sequence, for now a singular image with no frills, bellow this will be a text content of the blog, below this will be a comment form, this being a component with fields for username email and comment along with a save button, below this is a component that will display any posted comments, giving the username and comment but not the email, if a comment is selected this will open a comment edit page where the user will be able to edit or delete the comment, they will need to enter the same email as used to make the comment, this gives a simple authentication simulation.
 
 I will include a nav bar that will hold home and full screen icons, if time I will add other pages.
 I will include a footer that will just show a copyright message.
@@ -59,5 +59,11 @@ After spending too long making my wireframes last week this week I opted for an 
 <img src="./misc/week8wireframe.jpg" width="600" alt="a wireframe diagram of the planned application">
 
 time for some coding ....
+
+---
+
+### Checkpoint 2
+
+Again I am being haunted by last weeks assignment, I am not leaving the styling like I did back then, although I got my assignment functioning I got completly lost on the styling, So I have made a determined effort to have a presentable application this week, I have the home page 'finished' in so much as the styling is concerned, the only update here will be to the component holding the blog list, this will be a the title from each blog post and they will be links as outlined in the wireframe, I'm now going to design the tables and get the sql queries written.
 
 ---
