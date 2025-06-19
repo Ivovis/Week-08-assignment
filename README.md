@@ -1,6 +1,7 @@
 ### A Personal Blog with comments feature
 
 User Stories
+
 🐿️ As a user, I want to view all posts with options to sort them in ascending or descending order so that I can easily find content based on my preferences.
 
 🐿️ As a developer, I want to design a SQL schema that includes a posts table and a comments table, ensuring that comments are correctly associated with the corresponding post ID.
@@ -43,3 +44,20 @@ Requesting feedback about a specific part of your submission.
 What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 What went really well and what could have gone better?
+
+### Checkpoint 1
+
+A basic blog, the home screen will hold a blog description and list of existing blogs, user will be able to sort them in ascending or descending order using a discrete button.
+
+Clicking on an individual blog title in the list will open the blog page, Here the blog will be displayed, consisting of an image component at the top, this may later have a seriese of images that will be displayed in sequence, for now a singular image with no frills, bellow this will be a text content of the blog, below this will be a commment form, this being a component with fields for username email and comment along with a save button, below this is a component that will display any posted comments, giving the username and comment but not the email, if a comment is selected this will open a comment edit page where the user will be able to edit or delete the comment, they will need to enter the same email as used to make the comment, this gives a simple authentication simulation.
+
+I will include a nav bar that will hold home and full screen icons, if time I will add other pages.
+I will include a footer that will just show a copyright message.
+
+After spending too long making my wireframes last week this week I opted for an archaic method and took a picture of it.
+
+<img src="./misc/week8wireframe.jpg" width="600" alt="a wireframe diagram of the planned application">
+
+time for some coding ....
+
+---
