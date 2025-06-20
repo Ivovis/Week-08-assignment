@@ -64,6 +64,16 @@ time for some coding ....
 
 ### Checkpoint 2
 
-Again I am being haunted by last weeks assignment, I am not leaving the styling like I did back then, although I got my assignment functioning I got completly lost on the styling, So I have made a determined effort to have a presentable application this week, I have the home page 'finished' in so much as the styling is concerned, the only update here will be to the component holding the blog list, this will be a the title from each blog post and they will be links as outlined in the wireframe, I'm now going to design the tables and get the sql queries written.
+Again I am being haunted by last weeks assignment, I am not leaving the styling like I did back then, although I got my assignment functioning I got completely lost on the styling, So I have made a determined effort to have a presentable application this week, I have the home page 'finished' in so much as the styling is concerned, the only update here will be to the component holding the blog list, this will be a the title from each blog post and they will be links as outlined in the wireframe, I'm now going to design the tables and get the sql queries written.
+
+---
+
+### Checkpoint 3
+
+At last some productive results, I spent a fair bit of time tackling an error on my table creation scripts, I wrote them out (find them in ./misc/makedatabase.sql) and eventually got them working, now looking at them a bit later I think the blogid should still be NOT NULL but I'll revisit this later, I now have a working blog without comments, the home page displays and introduction and links to the existing blogs, I have a header and footer that displays on all pages, clicking a Blog title will take you to the blog page and show you its content, one concern I have at the moment is that the home page has been created in app/page.js I suspect it would have been better to place it into its own component and kept that page a little more streamlined.
+
+I seem to have forgotten how to handle non existent routes, I remember adding "/\*" to express, however for my \[blogid\] I check the passed in value is within range of the available rows as well as rejecting any other input, I do this by redirecting to a 404 page at app/error I have a feeling that theres a better way, but if not then I have at least demonstrated the use of redirect! although the requirement is for this to happen after a new comment has been added.
+
+Its midday Friday so I may actually finish before the end of the day and get a weekend this week!
 
 ---

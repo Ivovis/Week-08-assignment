@@ -1,0 +1,39 @@
+
+What I'm going to need
+
+Blog post table
+
+I've opted to store the images for the blogs on the server rather than the database, maybe later this would change and I would have a dedicated table of images and the imgsrc would be a json object holding a list of images.
+
+blog_content
+    id
+    title
+    imgsrc                      for now a single image - may expand later to several
+    blogtext                        
+
+comments table
+
+blog_comments
+    id
+    username                    limit to 20 characters
+    email                       only used to verify edits and deletes - will not be displayed
+    comment                     limit to 200 characters
+    postid                      foreign key pointing to parent blog post
+
+
+I need five images and blog texts for default/testing/dev
+
+    Where to start, blog about the different starting locations, use image from newgame screen, talk about how common it is to mistake these locations as different planets, but then after playing for some hours on a new game you find one of the other locations you already started in.
+
+    How to build, platforms, buildings all in factories 
+
+    The conveyor wall factory 
+
+    The self contained unit factories 
+
+    Trains 
+
+dummy data created
+
+
+

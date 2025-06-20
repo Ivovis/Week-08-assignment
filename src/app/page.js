@@ -13,8 +13,8 @@ export default function Home() {
         Satisfactory is a first-person open-world factory building game set on
         an alien planet — a delightful mix of exploration, automation, and,
         let&apos;s be honest, a fair bit of trial, error and horror. In this
-        blog, I&apos;ll take you through a few of my old play-throughs, from
-        setting up my very first production line in a field to building
+        blog, I&apos;ll take you through a few of my old play-through&apos;s,
+        from setting up my very first production line in a field to building
         sprawling, (in)efficient factories &#40;and the occasional chaotic
         mess&#41;. Expect progress updates, and later detailed blueprints,
         lessons learned, and maybe even a few tips to help you on your own
