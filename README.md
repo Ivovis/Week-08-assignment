@@ -77,3 +77,11 @@ I seem to have forgotten how to handle non existent routes, I remember adding "/
 Its midday Friday so I may actually finish before the end of the day and get a weekend this week!
 
 ---
+
+### Checkpoint 4
+
+I'll keep my mouth shut next time, its late afternoon Saturday, and I've just managed to get the comments box working, I still have to display the comments but at least I now have them ending up in the database, I spent a lot of time trying to workout how to show an image using the image filename from the blog_content table - I've shelved this idea for now, I know I should be able to save the image in the database but I expect this would use too much space for a free account so was planning on using locale images on the server but I have no idea how to import them dynamically without having some ungodly import for all images that I 'may' need to render.
+
+I need a break, next up is a component to render the comments
+
+---

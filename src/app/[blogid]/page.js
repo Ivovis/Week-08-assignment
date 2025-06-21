@@ -1,5 +1,8 @@
 import { db } from "@/../utils/dbConnection";
+import NewComment from "@/components/NewComment";
 import { redirect } from "next/navigation";
+import Image from "next/image";
+import image1 from "@/../public/images/image1.jpg";
 
 export default async function BlogIdPage({ params }) {
   //
@@ -48,15 +51,24 @@ export default async function BlogIdPage({ params }) {
   const blogData = query.rows;
 
   return (
-    <>
-      <h1>Blog Page</h1>
+    <div className="flex justify-center flex-col w-3l">
       {blogData.map((blog) => (
         <div key={blog.id}>
-          <p>{blog.title}</p>
-          <p>{blog.imgsrc}</p>
-          <p>{blog.blogtext}</p>
+          <p className="p-4 text-center text-2xl">{blog.title}</p>
+
+          {/* I gave up trying to use the name from the database in blog.imgsrc and just used a fixed image here :(  I might come back to this later  */}
+          <Image
+            src={image1}
+            alt="scene from the game Satisfactory"
+            width={500}
+            height={350}
+          />
+          <p className="p-3 mt-2 mb-2 bg-black  rounded-md text-justify">
+            {blog.blogtext}
+          </p>
         </div>
       ))}
-    </>
+      <NewComment blogid={digitId} />
+    </div>
   );
 }
