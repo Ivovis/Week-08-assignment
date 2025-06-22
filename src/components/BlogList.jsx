@@ -14,13 +14,13 @@ export default async function BlogList({ invert }) {
 
   return (
     <>
-      <ul className="h-[10rem] w-[20rem] p-1 overflow-hidden overflow-y-auto">
+      <div className="h-[10rem] p-1 overflow-hidden overflow-y-auto">
         {data.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/${blog.id}`}>{blog.title}</Link>{" "}
-          </li>
+          <p key={blog.id} className=" text-center">
+            <Link href={`/${blog.id}`}>{blog.title}</Link>
+          </p>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
