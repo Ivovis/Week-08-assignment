@@ -30,15 +30,17 @@ export default async function DeleteComment({ params }) {
     <>
       <div>
         <form action={handleSubmit} className="p-2 mt-5 border-2 rounded-t-2xl">
-          <legend className="m-2">Enter email to delete post</legend>
+          <legend className="flex justify-center m-2">
+            Enter email to delete post
+          </legend>
           <hr />
-          <section className="flex flex-col md:flex-row">
-            <div className="m-2 text-center">
+          <section className="">
+            <div className="flex justify-center mt-5">
               <input
                 type="email"
                 name="email"
                 maxLength="250"
-                className=" m-2 p-2 border-2 rounded-md h-10"
+                className=" w-100 m-2 p-2 border-2 rounded-md h-10"
               />
             </div>
           </section>
