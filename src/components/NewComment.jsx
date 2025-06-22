@@ -34,7 +34,7 @@ export default function NewComment(props) {
         <form action={handleSubmit} className="p-2 border-2 rounded-t-2xl">
           <legend className="m-2">Feel free to leave a comment</legend>
           <hr />
-          <section className="mt-2 flex flex-col md:flex-row">
+          <section className="mt-2 flex flex-col ">
             {/* ============================ */}
             <div className="p-2">
               <label htmlFor="name" className="p-1">

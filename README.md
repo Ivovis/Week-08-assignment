@@ -150,3 +150,9 @@ I am a bit disappointed I did get to spend more time producing actual content, I
 One last thought, I have no clear idea how I would handle the images, I have a singular place holder image, but I wanted to use the image name from the database (imgsrc) to select the image held in public/images, theres no doubt a way to do this.
 
 Later I hope to return and add a content form so I can create,edit and delete blog posts.
+
+---
+
+### Last few tweaks ...
+
+Imported a component I used in week 6 assignment to enable full screen switching, along some other fiddling with styling to make the app more responsive.
