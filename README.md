@@ -107,3 +107,8 @@ I will now add the delete button and then get back onto Blog post order problem 
 I may not be the fastest but this is my first time!, I now have the delete function working, when you click on a comment you are taken to a form to enter the email address used when creating the email - this serves as a poor mans authentication until we learn about it for real next week, entering the correct email will result in the comment being delete, a wrong email will cause the delete query to fail, canceling the dialog will normal just cause the same query fail, however if there is a valid email entered it will still delete the comment - I could chase this but 'some' authentication is better than none at all.
 
 Its getting late with less than six hours to the submission close time, I will now have another go at reversing the blog list order.
+
+<img src="./misc/W8-BraveBlogPage.png" alt="image from brave browser showing dark mode" width="400">
+<img src="./misc/W8-FirefoxBlogPage.png" alt="image from brave browser showing dark mode" width="350">
+
+---
