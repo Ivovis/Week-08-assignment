@@ -25,6 +25,8 @@ export default async function BlogIdPage({ params }) {
   //=====================================================================
   // check the requested page is 1. a number and 2. is in range else 404
 
+  // if(requestedId === "delete")
+
   // 1st convert to number
   const digitId = Number(requestedId);
 

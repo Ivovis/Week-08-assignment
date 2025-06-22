@@ -1,4 +1,5 @@
 import { db } from "@/../utils/dbConnection";
+import Link from "next/link";
 
 export default async function CommentList(props) {
   const blogid = props.blogid;
@@ -11,14 +12,18 @@ export default async function CommentList(props) {
   // do not render if the row count is 0 a non 0 value will evaluate at true
   return query.rowCount ? (
     <>
-      <div className="border-2 p-2 mt-3 rounded-b-2xl">
+      <section className="border-2 p-2 mt-3 rounded-b-2xl">
         {data.map((comment) => (
-          <div key={comment.id} className="border-2 m-2 p-2 rounded-b-lg">
+          <Link
+            key={comment.id}
+            href={`/${blogid}/${comment.id}/`}
+            className="flex p-2 m-2 gap-2 text-xs border-2 rounded-b-2xl "
+          >
             <p>{comment.username} Commented:</p>
             <p>{comment.text}</p>
-          </div>
+          </Link>
         ))}
-      </div>
+      </section>
     </>
   ) : (
     <></>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default async function BlogList({ invert }) {
   const flip = await invert;
-  console.log("invert?", flip);
+
   const query = flip
     ? await db.query(`SELECT * From blog_content ORDER BY id DESC`)
     : await db.query(`SELECT * From blog_content`);

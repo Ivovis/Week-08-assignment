@@ -5,8 +5,6 @@ import { redirect } from "next/navigation";
 export default function NewComment(props) {
   const blogid = props.blogid;
 
-  console.log("=========================", typeof blogid);
-
   async function handleSubmit(formData) {
     "use server";
 
@@ -25,8 +23,8 @@ export default function NewComment(props) {
 
     revalidatePath(`\{blogid}`);
 
-    // look this is where I would rediect if I was on a different page
-    // this is not appropiate in this instance because we are already on the correct page
+    // look this is where I would redirect if I was on a different page
+    // this is not appropriate in this instance because we are already on the correct page
     // I have used redirects on the [blogid] page to handle invalid params values
   }
 
@@ -36,7 +34,7 @@ export default function NewComment(props) {
         <form action={handleSubmit} className="p-2 border-2 rounded-t-2xl">
           <legend className="m-2">Feel free to leave a comment</legend>
           <hr />
-          <section className="flex flex-col md:flex-row">
+          <section className="mt-2 flex flex-col md:flex-row">
             {/* ============================ */}
             <div className="p-2">
               <label htmlFor="name" className="p-1">
@@ -64,7 +62,7 @@ export default function NewComment(props) {
               />
             </div>
           </section>
-          <section className=" pt-3 grid">
+          <section className="pt-2 grid">
             {/* ============================ */}
             <textarea
               type="text"
