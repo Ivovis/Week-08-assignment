@@ -63,8 +63,11 @@ export default async function BlogIdPage({ params }) {
             alt="scene from the game Satisfactory"
             width={500}
             height={350}
+            className="rounded-3xl"
           />
-          <p className="p-3 mt-2 mb-2  text-justify">{blog.blogtext}</p>
+          <p className="p-3 mt-2 mb-2  text-justify max-h-80 overflow-hidden overflow-y-auto">
+            {blog.blogtext}
+          </p>
         </div>
       ))}
       <NewComment blogid={digitId} />

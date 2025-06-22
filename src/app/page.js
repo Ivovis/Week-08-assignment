@@ -1,9 +1,13 @@
 import BlogList from "@/components/BlogList";
-import InvertButton from "@/components/InvertButton";
 
-export default function Home() {
-  // See Checkpoint 5 for details, I can render the correct BlogList by setting this value
-  const showInverted = false;
+import Link from "next/link";
+
+export default async function Home({ searchParams }) {
+  const qString = await searchParams;
+
+  let showInverted = false;
+  if (qString.sort === "new") showInverted = false;
+  else if (qString.sort === "old") showInverted = true;
 
   return (
     <div className="items-center justify-items-center  p-4 pb-4 font-[family-name:var(--font-geist-sans)]">
@@ -24,7 +28,14 @@ export default function Home() {
         lessons learned, and maybe even a few tips to help you on your own
         industrial adventure.
       </p>
-      <InvertButton />
+      <div className="flex justify-center">
+        <Link href={"/?sort=new"} className="bg-blue-200 rounded-2xl p-2 m-2 ">
+          Sort Newest
+        </Link>
+        <Link href={"/?sort=old"} className="bg-blue-200 rounded-2xl p-2 m-2 ">
+          Sort Oldest
+        </Link>
+      </div>
       <BlogList invert={showInverted} />
     </div>
   );

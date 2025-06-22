@@ -14,7 +14,7 @@ export default async function BlogList({ invert }) {
 
   return (
     <>
-      <div className="h-[10rem] p-1 overflow-hidden overflow-y-auto">
+      <div className="h-[10rem] p-1 pt-5  max-h-60 overflow-hidden overflow-y-auto">
         {data.map((blog) => (
           <p key={blog.id} className=" text-center">
             <Link href={`/${blog.id}`}>{blog.title}</Link>

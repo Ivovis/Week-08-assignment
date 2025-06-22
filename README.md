@@ -1,50 +1,5 @@
 ### A Personal Blog with comments feature
 
-User Stories
-
-🐿️ As a user, I want to view all posts with options to sort them in ascending or descending order so that I can easily find content based on my preferences.
-
-🐿️ As a developer, I want to design a SQL schema that includes a posts table and a comments table, ensuring that comments are correctly associated with the corresponding post ID.
-
-🐿️ As a user, I want to be able to delete posts using a delete button on each post’s page so that I can manage or remove my content from the database.
-
-🐿️ As a user, I want to add comments on individual posts using a user-friendly form.
-
-🐿️ As a user, I want to comment on posts directly on their dedicated pages so that my interactions are contextually tied to the content I view.
-
-🐿️ As a user, I want to be automatically redirected to the posts page after creating a new post so I can immediately see my content in the context of all posts.
-
-Requirements
-🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
-
-🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key. Please submit your database schema, as is mentioned in the submission instructions.
-🎯 Create a delete button on posts that allows users to delete the post from the database.
-
-🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
-
-🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).
-
-🎯 Add a redirect when a user creates a post to redirect them to the posts page.
-
-Reflection
-Please also provide an assignment reflection in your project README.md file.
-
-Required
-
-🎯 What requirements did you achieve?
-
-🎯 Were there any requirements or goals that you were unable to achieve?
-
-🎯 If so, what was it that you found difficult about these tasks?
-
-Optional
-🏹 Feel free to add any other reflections you would like to share about your submission, for example:
-
-Requesting feedback about a specific part of your submission.
-What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
-What errors or bugs did you encounter while completing your assignment? How did you solve them?
-What went really well and what could have gone better?
-
 ### Checkpoint 1
 
 A basic blog, the home screen will hold a blog description and list of existing blogs, user will be able to sort them in ascending or descending order using a discrete button.
@@ -112,3 +67,86 @@ Its getting late with less than six hours to the submission close time, I will n
 <img src="./misc/W8-FirefoxBlogPage.png" alt="image from brave browser showing dark mode" width="350">
 
 ---
+
+### Checkpoint 7
+
+I have the Blog List displaying correctly, getting this working was not intuitive I still wonder if I've done this correctly, I am calling the home page from the home page, I bet this has some issues relating to performance.
+
+To recap and check
+User Stories
+
+🐿️ As a user, I want to view all posts with options to sort them in ascending or descending order so that I can easily find content based on my preferences.
+
+- Happy I have done this
+
+🐿️ As a developer, I want to design a SQL schema that includes a posts table and a comments table, ensuring that comments are correctly associated with the corresponding post ID.
+
+- I did not have any issues here - see /makedatabase.sql
+
+🐿️ As a user, I want to be able to delete posts using a delete button on each post’s page so that I can manage or remove my content from the database.
+
+- setting aside 'which' posts this has be implemented for the comments
+
+🐿️ As a user, I want to add comments on individual posts using a user-friendly form.
+
+- This was integrated onto the blog page using the NewComment component and is working.
+
+🐿️ As a user, I want to comment on posts directly on their dedicated pages so that my interactions are contextually tied to the content I view.
+
+- This is done
+
+🐿️ As a user, I want to be automatically redirected to the posts page after creating a new post so I can immediately see my content in the context of all posts.
+
+- this was not really applicable with the new comments being made on the same page as the blog, however clicking on a comment will allow you to delete it from another page, and this will redirect you back the the blog page when completed.
+
+Requirements
+🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
+
+- Done
+
+🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key. Please submit your database schema, as is mentioned in the submission instructions.
+
+- Done
+
+🎯 Create a delete button on posts that allows users to delete the post from the database.
+
+- the comment is the button, clicking on the comment will take you to a delete page, not sure if this will fail because its not a button even though the functionality has been met.
+
+🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
+
+- Done
+
+🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).
+
+- done? I have this working but I may have done this the wrong way.
+
+🎯 Add a redirect when a user creates a post to redirect them to the posts page.
+
+- this has been implemented on the comment deletion page, i have also used redirects to handle incorrect route on /[blogid/] page.js
+
+Reflection
+
+🎯 What requirements did you achieve? - listed above, I think I have met everything, just not a definitively as I would like, I suspect I have not have used best practice in some areas
+
+🎯 Were there any requirements or goals that you were unable to achieve?
+
+- I am not happy that I understand how I should have done many of the things today, even though I think I have got everything working, I'm not convinced that I've done it the correct way.
+
+🎯 If so, what was it that you found difficult about these tasks?
+
+- I suspect the basic concepts.
+
+Optional
+🏹 Feel free to add any other reflections you would like to share about your submission, for example:
+
+- I think I have completed this through all of my notes above.
+
+I am happier than I was last week, I still have not had my grade for it so may have made some of the same mistakes again this week.
+
+I used Tailwind for the first time on this assignment, I was able to have a 'near presentable' style while I completed the coding this helped a lot, it will take more time and experience before I get excellent results.
+
+I am a bit disappointed I did get to spend more time producing actual content, I may spend the remaining time fixing that theres only a couple of hours left.
+
+One last thought, I have no clear idea how I would handle the images, I have a singular place holder image, but I wanted to use the image name from the database (imgsrc) to select the image held in public/images, theres no doubt a way to do this.
+
+Later I hope to return and add a content form so I can create,edit and delete blog posts.
