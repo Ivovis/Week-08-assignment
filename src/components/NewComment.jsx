@@ -18,19 +18,22 @@ export default function NewComment(props) {
     };
 
     // insert
-    console.log("formData", formData);
     await db.query(
       `INSERT INTO blog_comments (username,email,text,blogid) VALUES ($1,$2,$3,$4)`,
       [formData.name, formData.email, formData.comment, blogid]
     );
+
+    revalidatePath(`\{blogid}`);
+
+    // look this is where I would rediect if I was on a different page
+    // this is not appropiate in this instance because we are already on the correct page
+    // I have used redirects on the [blogid] page to handle invalid params values
   }
+
   return (
     <>
-      <div className="justify-center">
-        <form
-          action={handleSubmit}
-          className="p-2 bg-black border-2 rounded-md"
-        >
+      <div>
+        <form action={handleSubmit} className="p-2 border-2 rounded-t-2xl">
           <legend className="m-2">Feel free to leave a comment</legend>
           <hr />
           <section className="flex flex-col md:flex-row">
@@ -44,7 +47,7 @@ export default function NewComment(props) {
                 name="name"
                 maxLength="20"
                 required
-                className="p-2 bg-black border-2 rounded-md h-10"
+                className="p-2 border-2 rounded-md h-10"
               />
             </div>
             {/* ============================ */}
@@ -57,7 +60,7 @@ export default function NewComment(props) {
                 name="email"
                 maxLength="250"
                 required
-                className="p-2 bg-black border-2 rounded-md h-10"
+                className="p-2 border-2 rounded-md h-10"
               />
             </div>
           </section>
@@ -68,7 +71,7 @@ export default function NewComment(props) {
               name="comment"
               maxLength="299"
               required
-              className="p-3 m-2 bg-black border-2 rounded-md h-30"
+              className="p-3 m-2 border-2 rounded-md h-30"
             />
 
             <div className="flex justify-center ">

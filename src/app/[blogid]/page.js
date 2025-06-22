@@ -3,6 +3,7 @@ import NewComment from "@/components/NewComment";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import image1 from "@/../public/images/image1.jpg";
+import CommentList from "@/components/CommentList";
 
 export default async function BlogIdPage({ params }) {
   //
@@ -15,17 +16,14 @@ export default async function BlogIdPage({ params }) {
   const countString = await db.query(`SELECT COUNT(*) FROM blog_content`);
 
   // convert to number
-  // const count = Number("junk"); // Check error working
   const count = Number(countString.rows[0].count);
   // exit if the database is broken!
   if (Number.isNaN(count)) {
     redirect("/error");
   }
 
-  //   console.log("database row count:", count);
-
   //=====================================================================
-  // check the requested page is a. a number and b. is in range else 404
+  // check the requested page is 1. a number and 2. is in range else 404
 
   // 1st convert to number
   const digitId = Number(requestedId);
@@ -44,6 +42,7 @@ export default async function BlogIdPage({ params }) {
   }
 
   // get the blog post
+  // I used the requestID here rather than the tested digitID because its already the correct type
   const query = await db.query(`SELECT * FROM blog_content WHERE id = $1`, [
     requestedId,
   ]);
@@ -63,12 +62,11 @@ export default async function BlogIdPage({ params }) {
             width={500}
             height={350}
           />
-          <p className="p-3 mt-2 mb-2 bg-black  rounded-md text-justify">
-            {blog.blogtext}
-          </p>
+          <p className="p-3 mt-2 mb-2  text-justify">{blog.blogtext}</p>
         </div>
       ))}
       <NewComment blogid={digitId} />
+      <CommentList blogid={digitId} />
     </div>
   );
 }

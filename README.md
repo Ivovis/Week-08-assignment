@@ -85,3 +85,19 @@ I'll keep my mouth shut next time, its late afternoon Saturday, and I've just ma
 I need a break, next up is a component to render the comments
 
 ---
+
+### Checkpoint 5
+
+I have been working on the comment list rendering and the blog post display rendering order.
+
+I have created the CommentList component to render any comments for any given blog and this is working as intended, The assignment requirements are causing a little confusion, it seems to assume I already have a working blog and that I need to add comments to individual blog posts, I say this because none of the requirements require a form to create a new blog post, we start with "Display all posts on the page .... " going with this I created some dummy placeholder blog posts in the blog_content table, this fulfills the first part of the second requirement 'Create a SQL schema for a posts table' I also created the comments table.
+
+Third requirement "Create a delete button on posts that allows users to delete the post from the database." I miss understood this to be the comment posts we will be adding to the Blog Posts so planned for that, in all fairness I expect this will still demonstrate being able to delete posts - just not the actual blog_posts - I'm still going with this as its the less destructive path - if users delete my blog post theres no way at this time to add them in. Where as you, the assessor, can add and remove post comments forever, I hope this logic is not going to cause me to lose points.
+
+So from here I will add a delete button for the comments - not the blog posts.
+
+I have another issue thats taken up most of this morning, I have been tackling the sorting order for the list of blog posts on the home page, I am using a component to render the list of blog posts, and I can (in code) render them in reverse, I have added a button component that will be used to reverse the lists order (this is a client component), its functional only in that it changes its text when pressed. I have no idea right now how to link the two together, much searching on line has led me down too many rabbit holes, and I believe in completely the wrong direction.
+
+I will now add the delete button and then get back onto Blog post order problem later.
+
+---
